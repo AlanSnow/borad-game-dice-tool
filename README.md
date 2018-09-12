@@ -1,5 +1,5 @@
 # borad-game-dice-tool
-A dice tool for board game; 
+The dice tool for board game; 
 # 起因
 1.再也不能忍受玩Catan时欧皇疯狂抛4、10这些小概率数字了，用了骰塔还是不行；
 2.山屋惊魂丢了一个骰子也是很真实的；
