@@ -1,5 +1,6 @@
 # borad-game-dice-tool
 The dice tool for board game; 
+[click here](https://snowaoi.github.io/borad-game-dice-tool/)
 # 起因
 1.再也不能忍受玩Catan时欧皇疯狂抛4、10这些小概率数字了，用了骰塔还是不行；
 2.山屋惊魂丢了一个骰子也是很真实的；
