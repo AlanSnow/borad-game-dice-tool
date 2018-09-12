@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <title>桌游-投骰子</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="js/index.js" async></script>
+</head>
+
+<body>
+    <!--文档标题-->
+    <div id="title" class="title">
+        <h2>桌游</h2>
+        <h4>骰子</h4>
+        <h6>Board Game Dice</h6>
+    </div>
+
+    <!--设置栏-->
+    <div class="header">
+        <a class="btn" href="javascript:void(0)" onclick="toggleSettings()"><img src="img/setting.png" alt="设置"></a>
+    </div>
+
+    <!--隐藏的设置框-->
+    <div id="setting" class="setting">
+        <div id="set" class="set">
+            <!--右上角的X-->
+            <a class="close" href="javascript:void(0)" onclick="toggleSettings()">×</a>
+            <!--设置主体-->
+            <div class="setting-container">
+                <div class="game-type">
+                    <p>根据预设类型选择:</p>
+                    <a href="javascript:void(0)" onclick="catan(this)" class="active">卡坦岛</a>
+                    <a href="javascript:void(0)" onclick="house(this)">山屋惊魂</a>
+                    <a href="javascript:void(0)" class="disabled">DND跑团</a>
+                </div>
+                <div class="dice-type">
+                    <p>请设置骰子类型:</p>
+                    <a href="javascript:void(0)" onclick="six(this)">六面骰</a>
+                    <a href="javascript:void(0)" onclick="four(this)">四面骰</a>
+                    <a href="javascript:void(0)" onclick="three(this)">0-2骰</a>
+                </div>
+                <div class="dice-number">
+                    <p>请设置骰子数量:<span id='diceNumber'>2</span>个</p>
+                    <input type="range" min="1" max="10" value="2" id="setDiceNumber" onchange="numchange(this.value)">
+                </div>
+                <!--保存按钮-->
+                <a href="javascript:void(0)" class="save" onclick="save()">保存设置</a>
+            </div>
+        </div>
+
+        <!--黑边-->
+        <div id="black" class="black" onclick="toggleSettings()"></div>
+    </div>
+
+    <!--骰子操纵主体-->
+    <div id="container" class="container">
+        <!--在这里生成class="dice"的骰子-->
+        <div id="dice-container" class="dice-container">
+            <div class="dice"></div><div class="dice"></div>
+        </div>
+        <!--扔骰子按钮-->
+        <a class="start" href="javascript:void(0)" onclick="diceRandom()">THROW ALL</a>
+    </div> 
+</body>
+</html>
